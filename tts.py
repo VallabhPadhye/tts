@@ -8,9 +8,9 @@ st.set_page_config(page_title="Text to Speech Converter",
 def tts(text, voice):
     tts = gTTS(text=text, lang='hi', slow=False)
     if voice == 'Male':
-        tts.voice = gTTS.voice_ Male_hi
+        tts.voice = gTTS.VOICE_MALE_HI
     else:
-        tts.voice = gTTS.voice_ Female_hi
+        tts.voice = gTTS.VOICE_FEMALE_HI
     tts.save("output.mp3")
 
 text = st.text_area("Enter text here:")
